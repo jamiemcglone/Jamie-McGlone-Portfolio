@@ -31,7 +31,7 @@ const StyledBurger = styled.button<{ open: boolean }>`
         width: 2rem;
         height: 0.25rem;
         border-radius: 10px;
-        background-color: #037971;
+        background-color: #011627;
         transition: all 0.3s linear;
         transform-origin: 1px;
 

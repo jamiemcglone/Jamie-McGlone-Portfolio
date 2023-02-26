@@ -10,15 +10,15 @@ const SideMenu = () => {
     return (
         <>
             <StyledSideMenu open={open}>
-                {/* <Link to='/' onClick={() => close()}> */}
+                <Link to='/' onClick={() => close()}>
                     <StyledSideLink>Home</StyledSideLink>
-                {/* </Link> */}
-                {/* <Link to='/about' onClick={() => close()}> */}
+                </Link>
+                <Link to='/about' onClick={() => close()}>
                     <StyledSideLink>About</StyledSideLink>
-                {/* </Link> */}
-                {/* <Link to='/projects' onClick={() => close()}> */}
+                </Link>
+                <Link to='/projects' onClick={() => close()}>
                     <StyledSideLink>Projects</StyledSideLink>
-                {/* </Link> */}
+                </Link>
             </StyledSideMenu>
             <Burger open={open} setOpen={setOpen} />
         </>
@@ -39,7 +39,7 @@ const StyledSideMenu = styled.nav<{ open: boolean }>`
     height: 100vh;
     min-width:content;
     gap: 4rem;
-    background-color: var(--tertiary-color);
+    background-color: #037971;
     transition: transform 0.3s ease-in-out;
     transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
     @media (max-width:414px){
@@ -50,11 +50,12 @@ const StyledSideMenu = styled.nav<{ open: boolean }>`
 const StyledSideLink = styled.span`
 
     font-size: 3rem;
-    color: var(--background-color);
+    color: #cfc8b2;
     padding: 0 4rem;
+    text-decoration: none;
 
     :hover {
-        color: var(--secondary-color);
+        color: #011627;
         cursor: pointer;
     }
 `;

@@ -4,7 +4,7 @@ const Home = () => {
 
 
   const [text, setText] = useState("")
-  const [fullText, setFullText] = useState("Hi, I am Jamie McGlone, welcome to my portfolio")
+  const [fullText, setFullText] = useState("Hi, my name is Jamie McGlone, I am a software developer based in Edinburgh, Scotland");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {

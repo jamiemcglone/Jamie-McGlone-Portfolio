@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const Home = () => {
 
@@ -16,7 +17,14 @@ const Home = () => {
       }
   }, [index]);
 
-    return <>{text}</>
+    return (
+        <HomeText>{text}</HomeText>)
 }
 
 export default Home;
+
+const HomeText = styled.p`
+    color: #4C2E05;
+    text-align: center;
+    font-size: 1.5rem;
+`

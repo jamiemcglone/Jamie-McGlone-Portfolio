@@ -55,7 +55,7 @@ const StyledSideLink = styled.span`
     text-decoration: none;
 
     :hover {
-        color: #011627;
+        color: #4C2E05;
         cursor: pointer;
     }
 `;

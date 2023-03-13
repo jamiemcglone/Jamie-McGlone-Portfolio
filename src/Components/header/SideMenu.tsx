@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Burger } from './Burger';
 import styled from 'styled-components';
+import NavBar from './NavBar';
 
 const SideMenu = () => {
     const [open, setOpen] = useState<boolean>(false);
@@ -11,14 +12,15 @@ const SideMenu = () => {
         <>
             <StyledSideMenu open={open}>
                 <Link to='/' onClick={() => close()}>
-                    <StyledSideLink>Home</StyledSideLink>
-                </Link>
-                <Link to='/about' onClick={() => close()}>
                     <StyledSideLink>About</StyledSideLink>
+                </Link>
+                <Link to='/skills' onClick={() => close()}>
+                    <StyledSideLink>Skills</StyledSideLink>
                 </Link>
                 <Link to='/projects' onClick={() => close()}>
                     <StyledSideLink>Projects</StyledSideLink>
                 </Link>
+                <NavBar />
             </StyledSideMenu>
             <Burger open={open} setOpen={setOpen} />
         </>

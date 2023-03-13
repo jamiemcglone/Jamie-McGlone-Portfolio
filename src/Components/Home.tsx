@@ -6,11 +6,8 @@ const Home = () => {
 
 
   const [text, setText] = useState("")
-  const [fullText, setFullText] = useState("Jamie McGlone");
+  const [fullText, setFullText] = useState("Jamie McGlone - Software Developer");
   const [index, setIndex] = useState(0);
-  const [text2, setText2] = useState("")
-  const [fullText2, setFullText2] = useState("Software Developer");
-  const [index2, setIndex2] = useState(0);
 
   useEffect(() => {
       if (index < fullText.length) {
@@ -19,18 +16,10 @@ const Home = () => {
               setIndex(index + 1)
           }, 60)
       }
-      if (index2 < fullText2.length) {
-        setTimeout(() => {
-            setText2(text2 + fullText2[index2])
-            setIndex2(index2 + 1)
-        }, 60)
-      }
-  }, [index, index2]);
+  }, [index]);
 
     return (
         <HomeContainer>
-            <HomeText>{text}</HomeText>
-            <HomeText>{text2}</HomeText>
             <About/>
         </HomeContainer>
         )
@@ -46,6 +35,7 @@ const HomeText = styled.p`
 
 const HomeContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
 `

@@ -25,7 +25,6 @@ const StyledBurger = styled.button<{ open: boolean }>`
     outline: none;
     z-index: 10;
 
-
     div {
         position: relative;
         width: 2rem;

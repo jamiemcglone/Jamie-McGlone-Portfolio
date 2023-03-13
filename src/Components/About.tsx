@@ -3,22 +3,10 @@ import styled from "styled-components"
 
 const About = () => {
 
-    const [text, setText] = useState("")
-    const [fullText, setFullText] = useState("About");
-    const [index, setIndex] = useState(0);
   
-    useEffect(() => {
-        if (index < fullText.length) {
-            setTimeout(() => {
-                setText(text + fullText[index])
-                setIndex(index + 1)
-            }, 60)
-        }
-    }, [index]);
-    
     return(
     <AboutContainer>
-        <AboutTitle>{text}</AboutTitle>
+        <AboutTitle>About</AboutTitle>
     <AboutText>
     I graduated from CodeClan's professional software development course in February 2023.
     My previous background was in music and I graduated with a first class Bachelor of Arts with Honours degree in Popular Music in summer 2022.
@@ -40,6 +28,8 @@ export default About;
 
 const AboutText = styled.p`
     font-size: 1.2rem;
+    width: 60%;
+    text-align: center;
     `
 
 const AboutTitle = styled.h1`
@@ -52,4 +42,5 @@ const AboutContainer = styled.div`
       display: flex;
       flex-direction: column;
       padding: 5vw 5vh;
+      align-items: center;
 `

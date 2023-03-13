@@ -1,14 +1,15 @@
 import SideMenu from './SideMenu';
 import styled from "styled-components";
 import NavBar from './NavBar';
+import TitleBar from './TitleBar';
 
 const Header = () => {
 
     return (
         <HeaderBar>
             <SideMenu />
-            <NavBar />
-
+            <TitleBar />
+            <div></div>
         </HeaderBar>
     );
 };

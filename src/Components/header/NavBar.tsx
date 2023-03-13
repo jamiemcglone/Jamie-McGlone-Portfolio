@@ -9,9 +9,9 @@ const NavBar = () => {
 
     return(
         <LinksList>
-            <LinkItem href="https://www.github.com/jamiemcglone" target={"_blank"}><GitHubIcon /></LinkItem>
-            <LinkItem href="https://www.linkedin.com/jamiemcglone" target={"_blank"}><LinkedInIcon /></LinkItem>
-            <LinkItem href="mailto:jamie.mcglone@outlook.com" target={"_blank"}><MailIcon /></LinkItem>
+            <LinkItem href="https://www.github.com/jamiemcglone" target={"_blank"}><GitHubIcon fontSize='large'/></LinkItem>
+            <LinkItem href="https://www.linkedin.com/jamiemcglone" target={"_blank"}><LinkedInIcon fontSize='large'/></LinkItem>
+            <LinkItem href="mailto:jamie.mcglone@outlook.com" target={"_blank"}><MailIcon fontSize='large'/></LinkItem>
         </LinksList>
     )
 }
@@ -28,9 +28,9 @@ const LinksList = styled.div`
 const LinkItem = styled.a`
     padding: 2.5vw;
     text-decoration: none;
-    color: #011627;
+    color: #cfc8b2;
     :hover {
         cursor: pointer;
-        color: #037971;
+        color: #4C2E05;
     }
 `

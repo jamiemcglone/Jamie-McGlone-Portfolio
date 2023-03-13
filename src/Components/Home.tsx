@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import About from "./About";
 
 const Home = () => {
 
 
   const [text, setText] = useState("")
-  const [fullText, setFullText] = useState("Hi, my name is Jamie McGlone, I am a software developer based in Edinburgh, Scotland");
+  const [fullText, setFullText] = useState("Jamie McGlone");
   const [index, setIndex] = useState(0);
+  const [text2, setText2] = useState("")
+  const [fullText2, setFullText2] = useState("Software Developer");
+  const [index2, setIndex2] = useState(0);
 
   useEffect(() => {
       if (index < fullText.length) {
@@ -15,16 +19,33 @@ const Home = () => {
               setIndex(index + 1)
           }, 60)
       }
-  }, [index]);
+      if (index2 < fullText2.length) {
+        setTimeout(() => {
+            setText2(text2 + fullText2[index2])
+            setIndex2(index2 + 1)
+        }, 60)
+      }
+  }, [index, index2]);
 
     return (
-        <HomeText>{text}</HomeText>)
+        <HomeContainer>
+            <HomeText>{text}</HomeText>
+            <HomeText>{text2}</HomeText>
+            <About/>
+        </HomeContainer>
+        )
 }
 
 export default Home;
 
 const HomeText = styled.p`
-    color: #4C2E05;
+    color: #037971;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
+`
+
+const HomeContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 `

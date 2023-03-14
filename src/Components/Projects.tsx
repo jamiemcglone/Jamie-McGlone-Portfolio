@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { songaniserImage, spaceExplorersImage, spaceStationTrackerImage, learnrImage } from "../images/images";
 
 
 type Project = {
@@ -14,10 +15,10 @@ type Project = {
 
 const Projects = () => {
 
-    const learnr: Project = {title: "Learnr", image: "", bio: "a VLE", github: "https://github.com/treneff/learnr"}
-    const spaceExplorers: Project = {title: "Space Explorers", image: "https://user-images.githubusercontent.com/65739239/212085496-2725a4c3-2861-4c87-9af2-782e56b7c3c9.png", bio: "space woooo", github: "https://github.com/jamiemcglone/Space_Explorers"}
-    const songaniser: Project = {title: "Songaniser", image: "https://github.com/jamiemcglone/Songaniser-Project/raw/main/Songaniser%20Home%20Page.png", bio: "organise songs", github: "https://github.com/jamiemcglone/Songaniser-Project" }
-    const blackjack: Project = {title: "Space Station Tracker", image: "https://github.com/jamiemcglone/Space-Station-Tracker/raw/main/Space%20Station%20Tracker%20Home%20Page.png", bio: "fun tracker", github: "https://github.com/jamiemcglone/Space-Station-Tracker"}
+    const learnr: Project = {title: "Learnr", image: learnrImage, bio: "Virtual Learning Environment", github: "https://github.com/treneff/learnr"}
+    const spaceExplorers: Project = {title: "Space Explorers", image: spaceExplorersImage, bio: "Space Educational App", github: "https://github.com/jamiemcglone/Space_Explorers"}
+    const songaniser: Project = {title: "Songaniser", image: songaniserImage, bio: "Song and Setlist Organiser", github: "https://github.com/jamiemcglone/Songaniser-Project" }
+    const blackjack: Project = {title: "Space Station Tracker", image: spaceStationTrackerImage, bio: "Simple ISS Tracker using NASA API's", github: "https://github.com/jamiemcglone/Space-Station-Tracker"}
 
     const myProjects: Array<Project> = [learnr, spaceExplorers, songaniser, blackjack]
 
@@ -74,8 +75,10 @@ const ProjectInformationContainer = styled.div`
 
 const ProjectImage = styled.img`
     width: 50%;
+    height: 55vh;
     @media (max-width: 700px) {
         width: 95%;
+        height: 30vh;
     }
 `
 const GithubLink = styled.a`

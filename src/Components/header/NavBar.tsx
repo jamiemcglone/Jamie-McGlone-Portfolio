@@ -10,7 +10,7 @@ const NavBar = () => {
     return(
         <LinksList>
             <LinkItem href="https://www.github.com/jamiemcglone" target={"_blank"}><GitHubIcon fontSize='large'/></LinkItem>
-            <LinkItem href="https://www.linkedin.com/jamiemcglone" target={"_blank"}><LinkedInIcon fontSize='large'/></LinkItem>
+            <LinkItem href="https://www.linkedin.com/in/jamie-mcglone-943914236/" target={"_blank"}><LinkedInIcon fontSize='large'/></LinkItem>
             <LinkItem href="mailto:jamie.mcglone@outlook.com" target={"_blank"}><MailIcon fontSize='large'/></LinkItem>
         </LinksList>
     )

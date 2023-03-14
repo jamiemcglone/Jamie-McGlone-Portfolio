@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.f4b6f114.css",
-    "main.js": "/static/js/main.f8b7093b.js",
+    "main.js": "/static/js/main.f76a3675.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
     "static/media/spaceExplorers.png": "/static/media/spaceExplorers.7f7907f76e56789c50a1.png",
     "static/media/spaceStationTracker.png": "/static/media/spaceStationTracker.b8410f80f786b3db846b.png",
@@ -9,11 +9,11 @@
     "static/media/learnr.png": "/static/media/learnr.589c3c5d59e1948c9cf1.png",
     "index.html": "/index.html",
     "main.f4b6f114.css.map": "/static/css/main.f4b6f114.css.map",
-    "main.f8b7093b.js.map": "/static/js/main.f8b7093b.js.map",
+    "main.f76a3675.js.map": "/static/js/main.f76a3675.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f4b6f114.css",
-    "static/js/main.f8b7093b.js"
+    "static/js/main.f76a3675.js"
   ]
 }

@@ -2,20 +2,22 @@ import { useState } from "react";
 import styled from "styled-components";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 
 type Project = {
     title: string;
     image: string;
     bio: string;
+    github: string;
 }
 
 const Projects = () => {
 
-    const learnr: Project = {title: "Learnr", image: "", bio: "a VLE"}
-    const spaceExplorers: Project = {title: "Space Explorers", image: "https://user-images.githubusercontent.com/65739239/212085496-2725a4c3-2861-4c87-9af2-782e56b7c3c9.png", bio: "space woooo"}
-    const songaniser: Project = {title: "Songaniser", image: "https://github.com/jamiemcglone/Songaniser-Project/raw/main/Songaniser%20Home%20Page.png", bio: "organise songs"}
-    const blackjack: Project = {title: "BlackJack Terminal Game", image: "www.fakeimage.com", bio: "fun terminal game"}
+    const learnr: Project = {title: "Learnr", image: "", bio: "a VLE", github: "https://github.com/treneff/learnr"}
+    const spaceExplorers: Project = {title: "Space Explorers", image: "https://user-images.githubusercontent.com/65739239/212085496-2725a4c3-2861-4c87-9af2-782e56b7c3c9.png", bio: "space woooo", github: "https://github.com/jamiemcglone/Space_Explorers"}
+    const songaniser: Project = {title: "Songaniser", image: "https://github.com/jamiemcglone/Songaniser-Project/raw/main/Songaniser%20Home%20Page.png", bio: "organise songs", github: "https://github.com/jamiemcglone/Songaniser-Project" }
+    const blackjack: Project = {title: "Space Station Tracker", image: "https://github.com/jamiemcglone/Space-Station-Tracker/raw/main/Space%20Station%20Tracker%20Home%20Page.png", bio: "fun tracker", github: "https://github.com/jamiemcglone/Space-Station-Tracker"}
 
     const myProjects: Array<Project> = [learnr, spaceExplorers, songaniser, blackjack]
 
@@ -38,8 +40,9 @@ const Projects = () => {
             <p>{myProjects[projectIndex].bio}</p>
         </ProjectInformationContainer>
         <ProjectPageButtons>
-            {projectIndex > 0? <NavigationButton onClick={handlePreviousProjectChangeClick}><ArrowBackIosNewIcon /></NavigationButton> : null}
-            {projectIndex + 1 < myProjects.length? <NavigationButton onClick={handleNextProjectChangeClick}><ArrowForwardIosIcon /></NavigationButton> : null}
+            {projectIndex > 0? <NavigationButton onClick={handlePreviousProjectChangeClick}><ArrowBackIosNewIcon /></NavigationButton> : <div></div>}
+            <GithubLink href={myProjects[projectIndex].github} target="_blank"><GitHubIcon fontSize='large'/></GithubLink>
+            {projectIndex + 1 < myProjects.length? <NavigationButton onClick={handleNextProjectChangeClick}><ArrowForwardIosIcon /></NavigationButton> : <div></div>}
         </ProjectPageButtons>
     </ProjectPageContainer>
     )
@@ -74,4 +77,14 @@ const ProjectImage = styled.img`
     @media (max-width: 700px) {
         width: 95%;
     }
+`
+const GithubLink = styled.a`
+padding: 2.5vw;
+text-decoration: none;
+color: #011627;
+position: absolute;
+:hover {
+    cursor: pointer;
+    color: #037971;
+}
 `

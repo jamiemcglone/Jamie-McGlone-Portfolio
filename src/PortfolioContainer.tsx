@@ -4,9 +4,7 @@ import About from "./Components/About";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import styled from "styled-components";
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import MailIcon from '@mui/icons-material/Mail';
+import Skills from "./Components/Skills";
 
 const PortfolioContainer = () => {
     return <>
@@ -14,6 +12,7 @@ const PortfolioContainer = () => {
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/projects" element={<Projects/>}/>
+        <Route path="/skills" element={<Skills/>}/>
         <Route path="/about" element={<About/>}/>
     </Routes>
     <Footer id="footer">

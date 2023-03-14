@@ -36,8 +36,8 @@ const AboutText = styled.p`
     `
 
 const AboutTitle = styled.h1`
-    color: #4C2E05;
-    text-decoration: underline 0.15rem #037971;
+    color: #037971;
+    text-decoration: underline 0.25rem #011627;
     transition: text-decoration-opacity 300ms;
 `
 const AboutContainer = styled.div`

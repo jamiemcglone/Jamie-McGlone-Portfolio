@@ -46,7 +46,7 @@ const Skills = () => {
 export default Skills;
 
 const GridContainer = styled.div`
-    padding-top: 10rem;
+    padding-top: 4rem;
     display: grid;
     grid-template-columns: 300px 300px;
     grid-template-rows: 300px 300px;

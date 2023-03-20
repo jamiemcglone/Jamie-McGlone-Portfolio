@@ -65,6 +65,7 @@ const ProjectPageButtons = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-bottom: 5rem;
 `
 
 const ProjectInformationContainer = styled.div`
@@ -85,7 +86,7 @@ const GithubLink = styled.a`
 padding: 2.5vw;
 text-decoration: none;
 color: #011627;
-position: absolute;
+position: absolute; 
 :hover {
     cursor: pointer;
     color: #037971;

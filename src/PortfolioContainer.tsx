@@ -25,9 +25,8 @@ export default PortfolioContainer;
 
 const Footer = styled.span`
   position: absolute;
-  bottom: 1rem;
   left: 0;
   right: 0;
   text-align: center;
-  gap: 1rem;
+  margin-top: auto;
 `

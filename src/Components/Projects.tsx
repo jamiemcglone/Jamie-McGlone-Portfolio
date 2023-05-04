@@ -34,7 +34,9 @@ const Projects = () => {
     }
 
     return (
-    <ProjectPageContainer>
+    <ProjectPageContainer id="projects">
+        <ProjectCard>
+
         <ProjectInformationContainer>
             <h3>{myProjects[projectIndex].title}</h3>
             <ProjectImage src={myProjects[projectIndex].image}/>
@@ -45,6 +47,7 @@ const Projects = () => {
             <GithubLink href={myProjects[projectIndex].github} target="_blank"><GitHubIcon fontSize='large'/></GithubLink>
             {projectIndex + 1 < myProjects.length? <NavigationButton onClick={handleNextProjectChangeClick}><ArrowForwardIosIcon /></NavigationButton> : <div></div>}
         </ProjectPageButtons>
+        </ProjectCard>
     </ProjectPageContainer>
     )
 }
@@ -59,6 +62,18 @@ const NavigationButton = styled.div`
 const ProjectPageContainer = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+    width: 100%;
+    margin-bottom: 2rem;
+`
+
+const ProjectCard = styled.div`
+    background-color: #cfc8b2;
+    width: 50%;
+    border-radius: 20px;
+    padding: 5vw 5vh;
 `
 
 const ProjectPageButtons = styled.div`

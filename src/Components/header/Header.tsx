@@ -8,8 +8,7 @@ const Header = () => {
     return (
         <HeaderBar>
             <SideMenu />
-            <TitleBar />
-            <div></div>
+            <NavBar />
         </HeaderBar>
     );
 };

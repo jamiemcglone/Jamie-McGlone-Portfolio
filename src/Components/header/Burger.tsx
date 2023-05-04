@@ -24,17 +24,22 @@ const StyledBurger = styled.button<{ open: boolean }>`
     cursor: pointer;
     outline: none;
     z-index: 10;
+    position: fixed;
+    @media (max-width: 1000px) {
+        position: absolute;
+    }
 
     div {
         position: relative;
         width: 2rem;
         height: 0.25rem;
         border-radius: 10px;
-        background-color: #011627;
+        background-color: #cfc8b2;
         transition: all 0.3s linear;
         transform-origin: 1px;
 
         :first-child {
+            background-color: ${({ open }) => (open ? '#011627' : '#cfc8b2')};
             transform: ${({ open }) => (open ? 'rotate(45deg)' : 'rotate(0)')};
         }
         :nth-child(2) {
@@ -43,6 +48,7 @@ const StyledBurger = styled.button<{ open: boolean }>`
         }
         :nth-child(3) {
             transform: ${({ open }) => (open ? 'rotate(-45deg)' : 'rotate(0)')};
+            background-color: ${({ open }) => (open ? '#011627' : '#cfc8b2')};
         }
     }
 `;

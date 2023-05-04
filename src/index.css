@@ -1,9 +1,12 @@
-body {
+html, body {
   margin: 0;
-  font-family: 'Futura', sans-serif;
+  font-family: 'Futura', 'Inter', 'open-sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #cfc8b2;
+  background-color: #011627;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth !important;
 }
 
 code {

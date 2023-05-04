@@ -5,7 +5,9 @@ const About = () => {
 
   
     return(
-    <AboutContainer>
+    <AboutSection>
+
+    <AboutContainer id="about">
         <AboutTitle>About</AboutTitle>
     <AboutText>
     I am a software developer based in Edinburgh, Scotland. I love problem solving and challenging myself 
@@ -24,6 +26,7 @@ const About = () => {
     I also love sports, particularly football, which I regularly play at five a sides each week.
     </AboutText>
     </AboutContainer>
+    </AboutSection>
 )}
 
 export default About;
@@ -31,19 +34,52 @@ export default About;
 
 const AboutText = styled.p`
     font-size: 1.2rem;
-    width: 60%;
-    text-align: left;
+    text-align: center;
+    animation: text-slide-in-anim 3s ease-in forwards;
+        @keyframes text-slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
     `
 
 const AboutTitle = styled.h1`
-    color: #037971;
-    text-decoration: underline 0.25rem #011627;
+    color: #011627;
+    text-decoration: underline 0.25rem #037971;
     transition: text-decoration-opacity 300ms;
 `
 const AboutContainer = styled.div`
-      text-align: center;
       display: flex;
       flex-direction: column;
       padding: 5vw 5vh;
       align-items: center;
+      background-color: #cfc8b2;
+      width: 50%;
+      justify-content: center;
+      border: solid 1px #cfc8b2;
+      border-radius: 20px;
+      @media (max-width: 800px) {
+        width: 70%;
+      }
+      animation: slide-in-anim 2.5s ease-out forwards;
+        @keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+        transform: translateX(-45%);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+`
+
+const AboutSection = styled.div`
+    margin-top: 27rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `

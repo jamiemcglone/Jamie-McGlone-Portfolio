@@ -2,7 +2,6 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import MailIcon from '@mui/icons-material/Mail';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -23,6 +22,12 @@ const LinksList = styled.div`
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
+    margin-left: 82rem;
+    position: fixed;
+    @media (max-width: 1000px) {
+        margin-left: 14rem;
+        position: absolute;
+    }
 `
 
 const LinkItem = styled.a`
@@ -31,6 +36,6 @@ const LinkItem = styled.a`
     color: #cfc8b2;
     :hover {
         cursor: pointer;
-        color: #4C2E05;
+        color: #037971;
     }
 `

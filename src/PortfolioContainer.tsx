@@ -1,5 +1,4 @@
 import Header from "./Components/header/Header";
-import { Routes, Route } from "react-router-dom";
 import About from "./Components/About";
 import Home from "./Components/Home";
 import Projects from "./Components/Projects";
@@ -9,15 +8,15 @@ import Skills from "./Components/Skills";
 const PortfolioContainer = () => {
     return <>
     <Header />
-    <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/projects" element={<Projects/>}/>
-        <Route path="/skills" element={<Skills/>}/>
-        <Route path="/about" element={<About/>}/>
-    </Routes>
+    <BodySection>
+        <Home/>
+        <About/>
+        <Skills/>
+        {/* <Projects/> */}
     <Footer id="footer">
         © Jamie McGlone {new Date().getFullYear()}
     </Footer>
+    </BodySection>
     </>
 }
 
@@ -28,5 +27,9 @@ const Footer = styled.span`
   left: 0;
   right: 0;
   text-align: center;
-  margin-top: auto;
+  margin-top: 2rem;
+  color: #cfc8b2;
+`
+const BodySection = styled.main`
+    
 `

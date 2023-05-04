@@ -1,26 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import About from "./About";
+import TitleBar from "./header/TitleBar";
 
 const Home = () => {
 
-
-  const [text, setText] = useState("")
-  const [fullText, setFullText] = useState("Jamie McGlone - Software Developer");
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-      if (index < fullText.length) {
-          setTimeout(() => {
-              setText(text + fullText[index])
-              setIndex(index + 1)
-          }, 60)
-      }
-  }, [index]);
-
     return (
         <HomeContainer>
-            <About/>
+            <TitleBar />
         </HomeContainer>
         )
 }

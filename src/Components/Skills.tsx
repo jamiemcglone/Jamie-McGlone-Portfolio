@@ -6,9 +6,11 @@ import ScienceIcon from '@mui/icons-material/Science';
 
 const Skills = () => {
     return(
-        <GridContainer>
+        <SkillSection>
+
+        <GridContainer id="skills">
         <GridItemLanguages>
-            <GridHeader><CodeIcon /><br/>Languages</GridHeader>
+            <GridHeader><ItemIcon><CodeIcon /></ItemIcon><br/>Languages</GridHeader>
             <GridText>Python</GridText>
             <GridText>TypeScript</GridText>
             <GridText>Java</GridText>
@@ -17,7 +19,7 @@ const Skills = () => {
             <GridText>SQL</GridText>
         </GridItemLanguages>
         <GridItemTechnologies>
-            <GridHeader><DevicesIcon /><br/>Technologies</GridHeader>
+            <GridHeader><ItemIcon><DevicesIcon /></ItemIcon><br/>Technologies</GridHeader>
             <GridText>Git</GridText>
             <GridText>GitHub</GridText>
             <GridText>MongoDB</GridText>
@@ -26,49 +28,59 @@ const Skills = () => {
             <GridText>Mocha</GridText>
         </GridItemTechnologies>
         <GridItemFrameworks>
-            <GridHeader><BuildIcon /><br/>Frameworks & Libraries</GridHeader>
+            <GridHeader><ItemIcon><BuildIcon /></ItemIcon><br/>Frameworks & Libraries</GridHeader>
             <GridText>React</GridText>
             <GridText>Flask</GridText>
             <GridText>Spring</GridText>
             <GridText>Express</GridText>
         </GridItemFrameworks>
         <GridItemSkills>
-        <GridHeader><ScienceIcon /><br/>Skills</GridHeader>
+        <GridHeader><ItemIcon><ScienceIcon /></ItemIcon><br/>Skills</GridHeader>
             <GridText>Agile</GridText>
             <GridText>TDD</GridText>
             <GridText>Database design</GridText>
             <GridText>OOP</GridText>
         </GridItemSkills>
         </GridContainer>
+        </SkillSection>
     )
 }
 
 export default Skills;
 
 const GridContainer = styled.div`
-    padding-top: 4rem;
-    display: grid;
-    grid-template-columns: 300px 300px;
-    grid-template-rows: 300px 300px;
+    background-color: #cfc8b2;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
     grid-row: auto auto;
-    grid-template-areas: 
-    "languages"
-    "technologies"
-    "frameworks"
-    "skills";
-    column-gap: 5rem;
-    row-gap: 5rem;
-    align-items: center;
-    justify-content: center;
+    width: 50%;
+    padding: 5vw 5vh;
     font-size: large;
     @media (max-width: 700px) {
-        grid-template-columns: 300px;
-        grid-template-rows: 300px 200px 200px 175px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-start;
+       margin-bottom: 0;
+       margin-top: 0;
+       width: 70%;
     }
+	    animation: slide-in-anim 3.5s ease-out forwards;
+        @keyframes slide-in-anim {
+	20% {
+		opacity: 0;
+        transform: translateX(-45%);
+	}
+	100% {
+		opacity: 1;
+	}
+}
 `
 
 const GridItemLanguages = styled.div`
     grid-area: "languages";
+
 `
 const GridItemFrameworks = styled.div`
     grid-area: "frameworks";
@@ -80,11 +92,32 @@ const GridItemSkills = styled.div`
     grid-area: "skills";
 `
 const GridHeader = styled.h3`
-    color: #037971;
-    text-decoration: underline 0.2rem #011627;
+    color: #011627;
+    text-decoration: underline 0.2rem #037971;
 
     
     
 `
 
-const GridText = styled.p``
+const GridText = styled.p`
+	    animation: text-slide-in-anim 4.5s ease-in forwards;
+        @keyframes text-slide-in-anim {
+	20% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}`
+
+const SkillSection = styled.div`
+    margin-top: 27rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const ItemIcon = styled.div`
+    color: #037971;
+`

@@ -17,9 +17,9 @@ const SideMenu = () => {
                 <SideAnchors href='#skills' onClick={() => close()}>
                     <StyledSideLink>Skills</StyledSideLink>
                 </SideAnchors>
-                <SideAnchors href='#projects' onClick={() => close()}>
+                {/* <SideAnchors href='#projects' onClick={() => close()}>
                     <StyledSideLink>Projects</StyledSideLink>
-                </SideAnchors>
+                </SideAnchors> */}
             </StyledSideMenu>
             <Burger open={open} setOpen={setOpen} />
         </>

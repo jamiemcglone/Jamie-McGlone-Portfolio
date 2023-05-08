@@ -20,18 +20,16 @@ export default NavBar;
 const LinksList = styled.div`
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
     justify-content: space-evenly;
-    margin-left: 82rem;
-    position: fixed;
-    @media (max-width: 1000px) {
-        margin-left: 14rem;
-        position: absolute;
+    gap: 5rem;
+    margin-right: 1.5rem;
+    @media (max-width: 1100px) {
+       gap: 2rem;
+       margin-left: 12rem;
     }
 `
 
 const LinkItem = styled.a`
-    padding: 2.5vw;
     text-decoration: none;
     color: #cfc8b2;
     :hover {

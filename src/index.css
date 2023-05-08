@@ -3,10 +3,14 @@ html, body {
   font-family: 'Futura', 'Inter', 'open-sans';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #011627;
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth !important;
+  background-color: #011627;
+  color: #011627;
+  opacity: 1;
+  background-image: radial-gradient( ellipse farthest-corner at 9px 9px , #021f36, #011322 50%, #011627 50%);
+  background-size: 9px 9px;
 }
 
 code {

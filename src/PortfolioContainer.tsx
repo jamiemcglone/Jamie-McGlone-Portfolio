@@ -12,7 +12,7 @@ const PortfolioContainer = () => {
         <Home/>
         <About/>
         <Skills/>
-        {/* <Projects/> */}
+        <Projects/>
     <Footer id="footer">
         © Jamie McGlone {new Date().getFullYear()}
     </Footer>
@@ -27,7 +27,6 @@ const Footer = styled.span`
   left: 0;
   right: 0;
   text-align: center;
-  margin-top: 2rem;
   color: #cfc8b2;
 `
 const BodySection = styled.main`

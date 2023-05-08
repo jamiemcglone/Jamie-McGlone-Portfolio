@@ -10,20 +10,18 @@ const About = () => {
     <AboutContainer id="about">
         <AboutTitle>About</AboutTitle>
     <AboutText>
-    I am a software developer based in Edinburgh, Scotland. I love problem solving and challenging myself 
+    I am a proficient and creative software developer based in Edinburgh, Scotland. I love problem solving and challenging myself 
     and this is something I strive to do through coding.
-    I graduated from CodeClan's professional software development course in February 2023. On this course I studied Python, Javascript and Java, 
-    and thoroughly enjoyed my time working with my fellow students.
+    I graduated from CodeClan's professional software development course earlier this year and during my time on this course I studied multiple technologies, but the part I loved most was spending time in a 
+    classroom everyday learning with my fellow classmates.
     </AboutText>
     <AboutText>
-    My previous background was in music and retail. I graduated with a first class Bachelor of Arts with Honours degree in Popular Music in summer 2022.
-    My passion for music production developed into a curiosity to find out how the software I was constantly using was actually created, 
-    and so in the summer of 2022 I began self studying programming.
+    My previous background was in music and retail. I graduated with a first class Bachelor of Arts with Honours degree in Popular Music during the summer of 2022.
+    My passion for music production developed into a passion for software as I was fascinated by the music software I was using daily. This inspired me to pursue a career in tech and so once I graduated I began self-studying programming.
     </AboutText>
     <AboutText>
-    Outside of programming, my main passion is music. I love listening to it and playing it, and I enjoy most genres too.
-    I play guitar in a function band that gigs in various venues across Edinburgh.
-    I also love sports, particularly football, which I regularly play at five a sides each week.
+    Currently I am working as a freelance software developer. I am working with Small99 to improve their onboarding process for customers. Additionally, I am working to build a carbon footprint calculator,
+    doing so using new technologies to me. I have also been spending my time volunteering as a web developer for Vell Magazine.
     </AboutText>
     </AboutContainer>
     </AboutSection>
@@ -54,14 +52,14 @@ const AboutTitle = styled.h1`
 const AboutContainer = styled.div`
       display: flex;
       flex-direction: column;
-      padding: 5vw 5vh;
+      padding: 5vw 3vh;
       align-items: center;
       background-color: #cfc8b2;
       width: 50%;
       justify-content: center;
       border: solid 1px #cfc8b2;
       border-radius: 20px;
-      @media (max-width: 800px) {
+      @media (max-width: 950px) {
         width: 70%;
       }
       animation: slide-in-anim 2.5s ease-out forwards;

@@ -24,9 +24,9 @@ const StyledBurger = styled.button<{ open: boolean }>`
     cursor: pointer;
     outline: none;
     z-index: 10;
-    position: fixed;
     @media (max-width: 1000px) {
         position: absolute;
+        margin-left: .5rem;
     }
 
     div {

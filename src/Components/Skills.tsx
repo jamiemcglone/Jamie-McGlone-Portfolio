@@ -55,9 +55,10 @@ const GridContainer = styled.div`
     justify-content: space-evenly;
     grid-row: auto auto;
     width: 50%;
-    padding: 5vw 5vh;
+    padding: 5vw 3vh;
+    gap: 2rem;
     font-size: large;
-    @media (max-width: 700px) {
+    @media (max-width: 950px) {
        display: flex;
        flex-direction: column;
        justify-content: center;

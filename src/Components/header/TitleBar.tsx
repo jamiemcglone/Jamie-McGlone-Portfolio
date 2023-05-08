@@ -52,13 +52,16 @@ const TitleBar = () => {
     color: #cfc8b2;
     font-size: 2.5rem;
     text-align: center;
+    @media (max-width: 1000px) {
+        font-size: 1.5rem;
+    }
 `
 
 const TitleTextContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 10rem;
     align-items: center;
 `
 

@@ -21,7 +21,7 @@ const About = () => {
     </AboutText>
     <AboutText>
     Currently I am working as a freelance software developer. I am working with Small99 to improve their onboarding process for customers. Additionally, I am working to build a carbon footprint calculator,
-    doing so using new technologies to me. I have also been spending my time volunteering as a web developer for Vell Magazine.
+    doing so using new technologies to me. I have also been spending my time volunteering as a web developer for Vell Magazine. Get in touch if you want to work together!
     </AboutText>
     </AboutContainer>
     </AboutSection>
